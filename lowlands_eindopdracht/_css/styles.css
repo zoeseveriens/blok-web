@@ -1,0 +1,676 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*eind css reset*/
+
+
+/* stijling navigatie balk en hamburger menu */
+nav {
+    background-color: #002EC4;
+    min-width: 100vw;
+    box-shadow: inset 0px -36px 34px -22px rgba(0, 13, 62, 1);
+    position: fixed;
+    padding: 1em;
+    z-index: 1;
+}
+
+.hidden {
+    margin-top: -17em;
+    transition: .3s;
+    box-shadow: none;
+    position: absolute;
+    z-index: 0;
+
+}
+
+.hidden ul {
+    display: block;
+    text-align: center;
+}
+
+.hidden li {
+    padding-top: 1em;
+}
+
+.show {
+    margin-top: 4em;
+}
+
+.shadow {
+    box-shadow: none;
+}
+
+.home_nav #icon {
+    display: none;
+}
+
+
+@media (max-width:1020px) {
+    .home_nav a:not(img) {
+        display: none;
+    }
+
+    .home_nav #icon {
+        display: block;
+        position: absolute;
+        right: 3em;
+    }
+
+    .home_nav {
+        height: 3em;
+
+    }
+
+    .logo {
+        position: absolute;
+        left: 1em;
+    }
+}
+
+@media (min-width:1021px) {
+    .hidden {
+        display: none;
+    }
+}
+
+
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 5px 0 5px;
+
+}
+
+
+li {
+    list-style: none;
+}
+
+header li a {
+    color: white;
+    font-family: 'Arbutus', sans-serif;
+    font-size: 17px;
+    padding: 12px;
+    text-decoration: none;
+}
+
+header li a:hover {
+    color: #73CC72;
+    cursor: pointer;
+}
+
+/* eind stijling navigatie balk en hamburger menu */
+
+
+/*stijling header foto*/
+#header-img {
+    width: 100%;
+    margin-top: 3%;
+}
+
+.header-container {
+    object-fit: scale-down;
+
+}
+
+/* eind stijling header foto */
+
+/* stijling grid */
+section {
+    margin: 4em 2em 4em 2em;
+    display: grid;
+    grid-column: 1;
+    grid-gap: 3em;
+}
+
+@media (min-width:50em) {
+    section {
+        margin: 4em 2em 4em 2em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3em;
+    }
+}
+
+@media (min-width:80em) {
+    section {
+        margin: 4em 2em 4em 2em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3em;
+    }
+}
+
+section a {
+    text-decoration: none;
+    color: black;
+}
+
+section article {
+    background-color: #73CC72;
+    box-shadow: inset 0 0 13px 10px rgba(0, 0, 0, .85);
+    transition: transform .2s;
+    padding: 2em;
+}
+
+section article:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+section h1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-transform: uppercase;
+    font-family: 'Arbutus', sans-serif;
+}
+
+.intro {
+    font-family: 'Arbutus', sans-serif;
+    font-weight: 100;
+    font-size: 0.8em;
+    color: white;
+}
+
+article img {
+    width: 100%;
+}
+
+/* eind stijling grid*/
+
+/*stijling categorie balk*/
+
+/*https://www.cssmatic.com/box-shadow*/
+#categorie {
+    display: flex;
+    background-color: #73CC72;
+    color: white;
+    font-family: 'Arbutus', sans-serif;
+    font-size: 14px;
+    padding: 22px;
+    padding-left: 50px;
+    box-shadow: inset 0 -16px 12px -10px rgba(0, 0, 0, .85);
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-top: -0.2em;
+}
+
+#categorie:hover {
+    cursor: pointer;
+    color: #002EC4;
+}
+
+#icon:hover {
+    cursor: pointer;
+}
+
+.filter {
+    display: flex;
+    position: relative;
+    z-index: -1;
+    margin-top: -9em;
+    flex-wrap: wrap;
+    background-color: #73CC72;
+    padding: 60px 10px 10px 30px;
+    box-shadow: inset 0 -16px 12px -10px rgba(0, 0, 0, .85);
+    transition: .3s;
+}
+
+@media (max-width:863px) {
+    .filter {
+        margin-top: -15em;
+        margin-bottom: 6em;
+    }
+}
+
+.show_filter {
+    margin-top: -3em;
+}
+
+
+.filter li {
+    list-style: none;
+    margin: 20px 0 20px 0;
+}
+
+.filter li a {
+    color: white;
+    font-family: 'Arbutus', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: hsla(0, 0%, 100%, .1);
+    padding: 10px;
+    margin: 10px;
+}
+
+.filter li a:hover {
+    background-color: #002EC4;
+    cursor: pointer;
+}
+
+/* eind stijling categorie balk*/
+
+/*stijling detail pagina's*/
+
+.content-all {
+    width: 80%;
+    margin: 3em auto 3em auto;
+    background-image: url(../_img/background.png);
+    padding: 70px;
+}
+
+.content-all article h1 {
+    font-family: 'Arbutus', sans-serif;
+    font-size: 2em;
+    margin: 1em 0 0.5em 0;
+}
+
+.content-all p:first-child {
+    font-family: 'Arbutus', sans-serif;
+    color: white;
+}
+
+.content-all p {
+    margin-top: 1em;
+    line-height: 1.4;
+}
+
+
+.content-all article {
+    background-color: #73CC72;
+    box-shadow: inset 0 0 13px 10px rgba(0, 0, 0, .85);
+    padding: 2em;
+    margin-bottom: 2em;
+
+}
+
+.terug-knop {
+    font-size: 2em;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.content-social {
+    background-color: #73CC72;
+    box-shadow: inset 0 0 13px 10px rgba(0, 0, 0, .85);
+    padding: 2em;
+}
+
+.content-social ul {
+    margin-left: 4em;
+}
+
+.content-social li h2 {
+    margin-bottom: 1.5em;
+}
+
+.content-social li {
+    margin-bottom: -1em;
+}
+
+/*https://www.toptal.com/designers/htmlarrows/punctuation/triangular-bullet/
+https://www.w3schools.com/cssref/sel_before.asp*/
+.content-social li a:before {
+    content: "\2023";
+    color: #002EC4;
+    font-size: 3em;
+    position: relative;
+    top: 0.25em;
+    right: 0.05em;
+
+}
+
+.content-social a {
+    font-family: 'Arbutus', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.content-social a:hover {
+    color: #002EC4;
+    cursor: pointer;
+}
+
+.content-social h2 {
+    font-family: 'Arbutus', sans-serif;
+}
+
+iframe {
+    width: 100%;
+    height: 50vw;
+}
+
+/* styling formulier*/
+
+.content-all section {
+    background-color: #73CC72;
+    box-shadow: inset 0 0 13px 10px rgba(0, 0, 0, .85);
+    padding: 2em;
+    margin: 0 0 2em 0;
+    display: block;
+}
+
+.content-all section h2 {
+    font-family: 'Arbutus', sans-serif;
+    font-size: 1.5em;
+}
+
+form {
+    margin-top: 1em;
+}
+
+form label {
+    font-weight: 450;
+    font-family: sans-serif;
+    margin: 1em 0 0.4em 0;
+}
+
+form input {
+    width: 100%;
+    max-width: 20em;
+    box-sizing: border-box;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+form input:focus {
+    background-color: #dbe4ff;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    max-width: 19.5em;
+    height: 5em;
+    outline: none;
+    font-size: 1em;
+}
+
+textarea:focus {
+    background-color: #dbe4ff;
+}
+
+form label,
+input,
+button {
+    display: block;
+}
+
+.content-all section button {
+    max-width: 20em;
+    width: 100%;
+    background-color: #002EC4;
+    border: none;
+    color: white;
+    padding: 0.7em;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.content-all section button:hover {
+    cursor: pointer;
+}
+
+
+/* eind stijling formulier*/
+
+@media (min-width:900px) {
+    .content-all article {
+        padding: 4em;
+    }
+
+    iframe {
+        width: 370px;
+        height: 260px;
+    }
+
+    .content-social {
+        padding: 4em;
+        display: flex;
+    }
+
+    .content-all {
+        width: 60%;
+
+    }
+}
+
+@media (min-width:1020px) {
+    iframe {
+        width: 620px;
+        height: 380px;
+    }
+}
+
+@media (max-width:770px) {
+    .content-social ul {
+        margin: 1em 0 1em 0;
+    }
+
+    .content-all article h1 {
+        font-size: 1.5em;
+        margin: 1em 0 0.5em 0;
+    }
+
+    .content-all p:first-child {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width:1020px) {
+    .content-social ul {
+        margin-left: 1em;
+    }
+}
+
+/*styling footer*/
+
+footer {
+    background-color: #002EC4;
+    max-width: 100%;
+    padding: 50px;
+}
+
+footer h2,
+h3 {
+    color: white;
+    font-family: 'Arbutus', sans-serif;
+    padding-left: 10px;
+}
+
+footer h3 {
+    padding-top: 3em;
+}
+
+footer button {
+    border: none;
+    margin-left: 10px;
+    width: 100%;
+    max-width: 20em;
+    font-size: 1em;
+    padding: 0.4em;
+    outline: none;
+    background-color: #6a81cc;
+    color: white;
+}
+
+footer button:hover {
+    cursor: pointer;
+}
+
+footer form {
+    display: block;
+}
+
+
+footer label {
+    color: white;
+    padding-left: 10px;
+}
+
+footer input {
+    margin-left: 10px;
+}
+
+footer a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    padding: 4px;
+}
+
+footer ul {
+    display: flex;
+    padding: 15px 0 0 0;
+
+}
+
+footer img {
+    width: 45px;
+}
